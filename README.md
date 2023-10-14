@@ -1,7 +1,11 @@
 # 🚗responsive-MAcar-car-website
 
-Responsive Car website Using HTML CSS & JavaScript
-Contains animations when scrolling.
-Smooth scrolling in each section.
-Developed first with the Mobile First methodology, then for desktop.
-Compatible with all mobile devices and with a beautiful and pleasant user interface.
+1.Responsive Car website Using HTML CSS & JavaScript.
+
+2.Contains animations when scrolling.
+
+3.Smooth scrolling in each section.
+
+4.Developed first with the Mobile First methodology, then for desktop.
+
+5.Compatible with all mobile devices and with a beautiful and pleasant user interface.

@@ -108,11 +108,115 @@ img {
   overflow: hidden;
 }
 
+.shape{
+  background-color: hsla(219, 33%, 32%, .5);
+  filter: blur(112px);
+  border-radius: 50%;
+}
+
+.shape__big{
+  width: 400px;
+  height: 400px;
+}
+
+.shape__small{
+  width: 300px;
+  height: 300px;
+}
+
 /*=============== HEADER & NAV ===============*/
+
+.header{
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle{
+  color: var(--title-color);
+  display: inline-flex;
+}
+
+.nav__logo{
+  column-gap: 0.25rem;
+  font-weight: var(--font-medium);
+  align-items: center;
+  transition: color .3s;
+}
+
+.nav__logo i{
+  font-size: 1.25rem;
+}
+
+.nav__logo:hover{
+  color: var(--first-color);
+}
+
+.nav__toggle{
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 770px){
+  .nav__menu{
+    position: fixed;
+    background-color: hsla(0, 0%, 1005, .1);
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(96px);
+    -webkit-backdrop-filter: blur(96px);
+    transition: .3s;
+  }
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  padding-top: 9rem;
+  text-align: center;
+}
+
+.nav__link{
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  transition: color .4s;
+}
+
+.nav__link:hover{
+  color: var(--first-color);
+}
+
+.nav__close{
+  position: absolute;
+  top: .90rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
 
 
 /* Show menu */
 
+.show-menu{
+  right: 0;
+}
 
 /* Change background header */
 
@@ -122,9 +226,151 @@ img {
 
 /*=============== HOME ===============*/
 
+.home{
+  position: relative;
+  overflow: hidden;
+}
+
+.home__container{
+  position: relative;
+  padding-top: 4rem;
+  row-gap: 3rem;
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__title{
+  margin-bottom: 1rem;
+  font-size: var(--h1-font-size);
+}
+
+.home__subtitle{
+  margin-bottom: .30rem;
+  font-size: var(--h3-font-size);
+}
+
+.home__elec{
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  column-gap: .30rem;
+}
+
+.home__elec i{
+  color: var(--first-color);
+}
+
+.home__img{
+  width: 280px;
+  justify-self: center;
+}
+
+.home__car{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.home__car-name{
+  color: var(--text-color-light);
+  font-size: .630rem;
+  font-weight: 400;
+}
+
+.home__car-data{
+  text-align: center;
+}
+
+.home__car-number{
+  font-weight: var(--font-medium);
+  font-size: var(--h2-font-size);
+  margin-bottom: .25rem;
+}
+
+.home__car-icon{
+  background-color: var(--container-color);
+  border-radius: 50%;
+  padding: .380rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .880rem;
+  margin-bottom: .80rem;
+}
+
+.home__button{
+  position: relative;
+  border: 2px solid var(--first-color);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  row-gap: .10rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--white-color);
+  transition: .3s;
+  animation: button2 2.5s infinite;
+}
+
+.home__button i{
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+}
+.home__button::before{
+  content: '';
+  border: 2px solid hsl(158, 98%, 43%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 12px hsl(158, 98%, 43%);
+  transition: .3s;
+  animation: button 3s infinite;
+}
+
+.home .shape__big,
+.home .shape__small{
+  position: absolute;
+}
+
+.home .shape__big{
+  left: -9rem;
+  top: -4rem;
+}
+
+.home .shape__small{
+  right: -10rem;
+  bottom: -3rem;
+}
 
 /* Button animate */
-
+@keyframes button{
+  0%{
+    box-shadow: 0 0 12px hsl(158, 98%, 43%);
+  }
+  50%{
+    box-shadow: 0 0 24px hsl(158, 98%, 43%);
+  }
+}
+@keyframes button2{
+  50%{
+    box-shadow: 0 0 12px hsl(219, 69%, 56%);
+  }
+  50%{
+    box-shadow: 0 0 24px hsl(219, 69%, 56%);
+  }
+}
 
 /*=============== BUTTON ===============*/
 

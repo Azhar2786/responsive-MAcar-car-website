@@ -133,6 +133,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  transition: background-color .4s;
 }
 
 .nav{
@@ -220,6 +221,11 @@ img {
 
 /* Change background header */
 
+.scroll-header{
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--body-color);
+  box-shadow: 0 2px 4px hsla(0, 0%, 1%, 1);
+}
 
 /* Active link */
 
@@ -364,7 +370,7 @@ img {
   }
 }
 @keyframes button2{
-  50%{
+  0%{
     box-shadow: 0 0 12px hsl(219, 69%, 56%);
   }
   50%{
@@ -374,9 +380,65 @@ img {
 
 /*=============== BUTTON ===============*/
 
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  border-radius: .25rem;
+  font-size: var(--normal-font-size);
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: var(--first-color-alt);
+}
 
 /*=============== ABOUT ===============*/
 
+.about__container{
+  row-gap: 6rem;
+}
+
+.about__group{
+  position: relative;
+}
+
+.about__img{
+  width: 310px;
+  border-radius: .5rem;
+}
+
+.about__card{
+  width: 180px;
+  position: absolute;
+  right: 0;
+  bottom: -2.5rem;
+  background-color: hsla(0, 0%, 100%, .1);
+  padding: 1rem .75rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  text-align: center;
+  border-radius: 1.25rem;
+}
+
+.about__card-title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.about__card-description{
+  font-size: var(--smaller-font-size);
+}
+
+.about__title{
+  text-align: initial;
+  margin-bottom: 2rem;
+}
+
+.about__description{
+  margin-bottom: 2rem;
+}
 
 /*=============== POPULAR ===============*/
 

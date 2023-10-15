@@ -33,6 +33,12 @@ navLink.forEach(e => e.addEventListener('click', () =>{
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
+window.addEventListener('scroll', () =>{
+    const header = document.getElementById('header');
+    // if scroll y is greader than 50 view port than add scroll header class
+    this.scrollY >= 50 ? header.classList.add('scroll-header')
+                       : header.classList.remove('scroll-header');
+})
 
 /*=============== POPULAR SWIPER ===============*/
 

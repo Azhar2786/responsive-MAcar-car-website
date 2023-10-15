@@ -18,6 +18,8 @@ MILEAGE
 94%
 BATTERY
 
+Azhar
+
 ========== ABOUT ==========
 .about__card-title
 2.500+
@@ -107,6 +109,7 @@ Porsche
 Panamera
 $126,900
 
+Azhar 
 ========== OFFER ==========
 .section__title
 Do You Want To Receive <br> Special Offers?

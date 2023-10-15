@@ -42,13 +42,46 @@ window.addEventListener('scroll', () =>{
 
 /*=============== POPULAR SWIPER ===============*/
 
+let swiperPopular = new Swiper(".popular__container",{
+    loop: true,
+    spaceBetween: 24,
+    slidesPerView: 'auto',
+    grabCursor: true,
+
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        },
+        1024: {
+            spaceBetween: 48,
+        },
+    },
+});
 
 /*=============== MIXITUP FILTER FEATURED ===============*/
 
+let mixerFeatured = mixitup('.featured__content',{
+    selectors: {
+        target: '.featured__card'
+    },
+    animation: {
+        duration: 300
+    }
+})
 
 /* Link active featured */ 
 
+const linkFeatured = document.querySelectorAll('.featured__item');
 
+function actiiveFeatured(){
+    linkFeatured.forEach(l => l.classList.remove('active-featured'));
+    this.classList.add('active-featured');
+}
+linkFeatured.forEach(l=> l.addEventListener('click', actiiveFeatured));
 /*=============== SHOW SCROLL UP ===============*/ 
 
 

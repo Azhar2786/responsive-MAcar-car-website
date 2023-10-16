@@ -82,10 +82,60 @@ function actiiveFeatured(){
     this.classList.add('active-featured');
 }
 linkFeatured.forEach(l=> l.addEventListener('click', actiiveFeatured));
+
 /*=============== SHOW SCROLL UP ===============*/ 
 
 
+window.addEventListener('scroll', () =>{
+    const scrollUp = document.getElementById('scroll-up');
+
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                        : scrollUp.classList.remove('show-scroll');
+})
+// Azhar
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () =>{
+  const scrollDown = window.scrollY
+
+  sections.forEach(current =>{
+      const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute('id'),
+      sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+    if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+      sectionsClass.classList.add('active-link')
+    }else{
+      sectionsClass.classList.remove('active-link')
+    }
+  })
+}
+window.addEventListener('scroll',scrollActive)
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true, // Animation repeat
+})
+
+sr.reveal('.home__title, .popular__container, .features__img, .featured__filters')
+sr.reveal('.home__subtitle',{delay:600})
+sr.reveal('.home__elec',{delay:700})
+sr.reveal('.home__img',{delay:750})
+sr.reveal('.home__car-data',{delay:850, interval: 100, origin: 'bottom'})
+sr.reveal('.home__button',{delay:900, origin: 'bottom'})
+sr.reveal('.about__group, .offer__data',{origin: 'left'})
+sr.reveal('.about__data, .offer__img',{origin: 'right'})
+sr.reveal('.features__map',{dealy: 600, origin: 'bottom'})
+sr.reveal('.features__card',{interval: 300})
+sr.reveal('.featured__card, .logos__content, .footer__content',{interval: 100})
+
+// Azhar

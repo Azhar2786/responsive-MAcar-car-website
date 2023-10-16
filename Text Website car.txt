@@ -122,7 +122,7 @@ mailing list.
 .button
 Subscribe Now
 
-========== FOOTER ==========
+========== FOOTER ========== Azhar
 .footer__title
 MAcar
 

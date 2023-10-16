@@ -753,15 +753,144 @@ img {
 .active-featured img{
   opacity: 1;
 }
+
 /*=============== OFFER ===============*/
 
+.offer{
+  position: relative;
+}
+
+.offer__container{
+  grid-template-rows: max-content 224px;
+}
+
+.offer__bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.offer__img,
+.offer__data{
+  position: relative;
+}
+
+.offer__data{
+  text-align: center;
+}
+
+.offer__title{
+  margin-bottom: 2rem;
+}
+
+.offer__description{
+  margin-bottom: 3rem;
+}
+
+.offer__img{
+  position: absolute;
+  max-width: initial;
+  width: 400px;
+  bottom: 2rem;
+  right: -5.5rem;
+}
 
 /*=============== LOGOS ===============*/
+
+.logos__img{
+  width: 40px;
+  opacity: .4;
+  transition: opacity .3s;
+}
+
+.logos__container{
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 2rem;
+}
+
+.logos__img:hover{
+  opacity: 1;
+}
 
 
 /*=============== FOOTER ===============*/
 
+.footer{
+  position: relative;
+  overflow: hidden;
+}
 
+.footer .shape__big,
+.footer .shape__small{
+  position: absolute;
+}
+
+.footer .shape__big{
+  width: 300px;
+  height: 300px;
+  left: -12rem;
+  top: 6rem;
+}
+
+.footer .shape__small{
+  right: -13rem;
+  bottom: -6rem;
+}
+
+.footer__container{
+  row-gap: 2.5rem;
+  position: relative;
+}
+
+.footer__logo{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1.25rem;
+  transition: .3s;
+}
+
+.footer__logo i{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.footer__logo:hover i{
+  color: var(--first-color);
+  transform: translatey(-.25rem);
+}
+
+.footer__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.25rem;
+}
+
+.footer__links{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.footer__link,
+.footer__social-link{
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.footer__link:hover,
+.footer__social-link:hover{
+  color: var(--title-color);
+}
 /*=============== SCROLL BAR ===============*/
 
 
